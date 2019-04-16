@@ -32,7 +32,6 @@
           var speedKbps = option.imageSize / duration;
           var speedMbps = speedKbps / 1024;
           resolve({
-            imageSize: option.imageSize,
             duration: duration,
             speedKbps: speedKbps,
             speedMbps: speedMbps
