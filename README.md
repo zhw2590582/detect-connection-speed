@@ -34,12 +34,12 @@ Will expose the global variable to `window.detectConnectionSpeed`.
 detectConnectionSpeed(
   {
     imageUrl: 'https://avatars3.githubusercontent.com/u/5907357',
-    imageSize: 29532
+    imageSize: 29532,
+    time: 1000
   },
   function(result) {
     console.log(result);
     // {
-    //     imageSize,
     //     duration,
     //     speedKbps,
     //     speedMbps,
