@@ -4,10 +4,10 @@
   } else if (typeof define === 'function' && define.amd) {
     define(factory);
   } else {
-    window.detectconnectionspeed = factory();
+    window.detectConnectionSpeed = factory();
   }
 })(this, function() {
-  return function detectconnectionspeed() {
+  return function detectConnectionSpeed() {
     var opt =
       arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var callback = arguments.length > 1 ? arguments[1] : undefined;
