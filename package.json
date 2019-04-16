@@ -1,0 +1,20 @@
+{
+  "name": "detect-connection-speed",
+  "version": "1.0.0",
+  "description": "Detect connection speed with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhw2590582/detect-connection-speed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhw2590582/detect-connection-speed/issues"
+  },
+  "homepage": "https://github.com/zhw2590582/detect-connection-speed#readme"
+}

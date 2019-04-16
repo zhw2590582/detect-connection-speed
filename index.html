@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>detect-connection-speed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+
+  <body>
+    <button class="fetch">Fetch</button>
+    <button class="abort">Abort</button>
+    <script src="./index.js"></script>
+    <script>
+      detectconnectionspeed(
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1554659966-023466cbc607',
+          imageSize: 2028998
+        },
+        function(result) {
+          console.log(result);
+        }
+      );
+    </script>
+  </body>
+</html>
