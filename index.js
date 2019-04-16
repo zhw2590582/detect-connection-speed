@@ -15,7 +15,8 @@
       {
         imageUrl: '',
         imageSize: 1024,
-        time: 1000
+        time: 1000,
+        loop: true,
       },
       opt
     );
@@ -39,9 +40,7 @@
         };
 
         startTime = new Date().getTime();
-        setTimeout(function() {
-          img.src = option.imageUrl + '?time=' + startTime;
-        }, 0);
+        img.src = option.imageUrl + '?time=' + startTime;
       });
     }
 
@@ -49,7 +48,7 @@
       setTimeout(function() {
         detect().then(function(result) {
           callback(result);
-          loop();
+          option.loop && loop();
         });
       }, option.time);
     })();
