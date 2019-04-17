@@ -17,35 +17,32 @@ $ yarn add detect-connection-speed
 ```
 
 ```js
-import detectConnectionSpeed from "detect-connection-speed";
+import DetectConnectionSpeed from 'detect-connection-speed';
 ```
 
 Or umd builds are also available
 
 ```html
-<script src="path/to/detect-connection-speed.js"></script>
+<script src="path/to/detectConnectionSpeed.js"></script>
 ```
 
-Will expose the global variable to `window.detectConnectionSpeed`.
+Will expose the global variable to `window.DetectConnectionSpeed`.
 
 ## Usage
 
 ```js
-detectConnectionSpeed(
-  {
-    imageUrl: 'https://avatars3.githubusercontent.com/u/5907357',
-    imageSize: 29532,
-    time: 1000
-  },
-  function(result) {
+// Init
+var detect = new DetectConnectionSpeed({
+  url: '',
+  loop: true,
+  time: 1000,
+  detectCallback: function(result) {
     console.log(result);
-    // {
-    //     duration,
-    //     speedKbps,
-    //     speedMbps,
-    // }
   }
-);
+});
+
+// Destroy
+detect.destroy();
 ```
 
 ## License

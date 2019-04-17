@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>detect connection speed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      input {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <input
+        class="url"
+        type="text"
+        placeholder="Detect Url"
+        value="https://images.unsplash.com/photo-1494256997604-768d1f608cac"
+      />
+    </p>
+    <p>
+      <input
+        class="speedKbps"
+        type="text"
+        placeholder="Speed Kbps"
+        value=""
+        disabled
+      />
+    </p>
+    <p><input class="detect" type="button" value="Detect" /></p>
+    <p><input class="cancel" type="button" value="Cancel" /></p>
+    <script src="./detectConnectionSpeed-uncompiled.js"></script>
+    <script>
+      var $url = document.querySelector('.url');
+      var $speedKbps = document.querySelector('.speedKbps');
+      var $detect = document.querySelector('.detect');
+      var $cancel = document.querySelector('.cancel');
+      var detect = null;
+
+      $detect.addEventListener('click', function() {
+        $speedKbps.value = 'waiting...';
+        detect = new DetectConnectionSpeed({
+          url: $url.value,
+          detectCallback: function(result) {
+            $speedKbps.value = result.speedKbps.toFixed(2) + ' kbp/s';
+          }
+        });
+      });
+
+      $cancel.addEventListener('click', function() {
+        if (detect) {
+            detect.destroy();
+        }
+      });
+    </script>
+  </body>
+</html>
