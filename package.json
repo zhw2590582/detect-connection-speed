@@ -1,6 +1,6 @@
 {
   "name": "detect-connection-speed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Detect connection speed with JavaScript",
   "main": "dist/detectConnectionSpeed.js",
   "scripts": {
